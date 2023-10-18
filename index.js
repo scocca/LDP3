@@ -1,19 +1,14 @@
-let numero = 0;
-do{
-    numero = parseFloat(prompt("Ingresa un número a calcular:"));
-    if(NaN(numero)){
-        console.log("Error, intenta esscribiendo un número");
+function calcular(){  
+    let numero = document.getElementById('calcular').value;
+    if(isNaN(numero)){
+        alert("Error, intenta esscribiendo un número");
+        return;
     }
-} while(isNaN(numero));
-function factorial(numero){
-    let resultado = 1;
-    for(var i=1; i<= numero; i++){
-        resultado *=i;
+
+    let resultado =1;
+    for(var i=1; i<=numero; i++){
+        resultado *= i;
     }
-    return resultado;
+document.getElementById('resultado').innerHTML= "El factorial es" + resultado;
 }
-console.log(factorial(numero));
-
-
-
 
